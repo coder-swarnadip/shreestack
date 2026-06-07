@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #020617;
+  color: #ffffff;
+}
+
+::selection {
+  background: #38bdf8;
+  color: #020617;
+}
