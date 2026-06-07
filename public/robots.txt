@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shreestack.in/sitemap.xml
+Sitemap: https://shreestack.netlify.app/sitemap.xml
