@@ -12,7 +12,7 @@ const brandEmail = "shreestackdigitalsolutions@gmail.com";
 const formEndpoint =
   import.meta.env.VITE_FORMSPREE_ENDPOINT || "https://formspree.io/f/YOUR_FORM_ID";
 const whatsappUrl =
-  "https://wa.me/919091701136?text=Hi%20ShreeStack%20Digital%20Solutions%2C%20I%20want%20to%20discuss%20a%20website%20or%20digital%20solution.";
+  "https://wa.me/918697002797?text=Hi%20ShreeStack%20Digital%20Solutions%2C%20I%20want%20to%20discuss%20a%20website%20or%20digital%20solution.";
 
 function Contact() {
   const [status, setStatus] = useState("idle");
