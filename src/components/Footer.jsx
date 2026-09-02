@@ -1,4 +1,3 @@
-
 import { Mail, MapPin } from "lucide-react";
 import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import BrandLogo from "./BrandLogo";
@@ -11,17 +10,17 @@ const whatsappUrl =
 
 function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-slate-950 px-4 pb-6 pt-12 sm:px-6 sm:pb-8 sm:pt-16">
+    <footer className="border-t border-white/10 bg-slate-950 px-4 pb-5 pt-8 sm:px-6 sm:pb-8 sm:pt-12">
       <div
         className="
           mx-auto
           grid
           max-w-7xl
           grid-cols-1
-          gap-10
+          gap-7
 
           sm:grid-cols-2
-          sm:gap-12
+          sm:gap-10
 
           lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.95fr]
           lg:gap-10
@@ -37,74 +36,79 @@ function Footer() {
             <BrandLogo size="large" />
           </a>
 
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-400">
+          <p className="mt-3 max-w-md text-xs leading-relaxed text-slate-400 sm:text-sm">
             We help businesses establish a stronger online presence through
             professional websites, dashboards, and custom digital solutions.
           </p>
 
-          <p className="mt-3 text-sm font-medium leading-relaxed text-sky-400">
+          <p className="mt-2 text-xs font-medium leading-relaxed text-sky-400 sm:text-sm">
             Websites, Dashboards & Smart Business Systems
           </p>
 
           {/* Social Links */}
-          <div className="mt-6 flex gap-3">
+          <div className="mt-4 flex gap-2.5">
             <SocialLink
               href="https://www.linkedin.com/in/swarnadip-sarkar/"
-              icon={<FaLinkedinIn size={17} />}
+              icon={<FaLinkedinIn size={16} />}
               label="LinkedIn"
             />
 
             <SocialLink
               href={`mailto:${brandEmail}`}
-              icon={<Mail size={18} />}
+              icon={<Mail size={17} />}
               label="Email"
             />
 
             <SocialLink
               href={whatsappUrl}
-              icon={<FaWhatsapp size={18} />}
+              icon={<FaWhatsapp size={17} />}
               label="WhatsApp"
             />
           </div>
         </div>
 
-        {/* Quick Links */}
-        <FooterGroup title="Quick Links">
-          {navLinks.map((link) => (
-            <FooterLink key={link.name} href={link.path}>
-              {link.name}
-            </FooterLink>
-          ))}
-        </FooterGroup>
+        {/* Mobile: Quick Links + Services side by side */}
+        <div className="grid grid-cols-2 gap-5 sm:col-span-2 sm:grid-cols-2 lg:col-span-2 lg:contents">
 
-        {/* Services */}
-        <FooterGroup title="Services">
-          {services.slice(0, 5).map((service) => (
-            <FooterLink key={service.title}>
-              {service.title}
-            </FooterLink>
-          ))}
-        </FooterGroup>
+          {/* Quick Links */}
+          <FooterGroup title="Quick Links">
+            {navLinks.map((link) => (
+              <FooterLink key={link.name} href={link.path}>
+                {link.name}
+              </FooterLink>
+            ))}
+          </FooterGroup>
+
+          {/* Services */}
+          <FooterGroup title="Services">
+            {services.slice(0, 5).map((service) => (
+              <FooterLink key={service.title}>
+                {service.title}
+              </FooterLink>
+            ))}
+          </FooterGroup>
+
+        </div>
 
         {/* Contact */}
         <FooterGroup title="Contact">
           <FooterLink
             href={`mailto:${brandEmail}`}
-            icon={<Mail size={16} />}
+            icon={<Mail size={15} />}
           >
             <span className="break-all">{brandEmail}</span>
           </FooterLink>
 
           <FooterLink
             href={whatsappUrl}
-            icon={<FaWhatsapp size={16} />}
+            icon={<FaWhatsapp size={15} />}
             external
           >
             WhatsApp Consultation
           </FooterLink>
 
-          <p className="inline-flex items-start gap-2 text-sm leading-relaxed text-slate-400">
-            <MapPin size={16} className="mt-0.5 shrink-0" />
+          <p className="inline-flex items-start gap-2 text-xs leading-relaxed text-slate-400 sm:text-sm">
+            <MapPin size={15} className="mt-0.5 shrink-0" />
             <span>West Bengal, India</span>
           </p>
         </FooterGroup>
@@ -114,18 +118,20 @@ function Footer() {
       <div
         className="
           mx-auto
-          mt-10
+          mt-7
           flex
           max-w-7xl
           flex-col
-          gap-3
+          gap-2
           border-t
           border-white/10
-          pt-6
+          pt-4
           text-center
-          text-xs
+          text-[11px]
           text-slate-500
 
+          sm:mt-10
+          sm:pt-6
           sm:text-sm
 
           md:flex-row
@@ -152,7 +158,7 @@ function FooterGroup({ title, children }) {
         {title}
       </h3>
 
-      <div className="mt-4 grid gap-3">
+      <div className="mt-3 grid gap-2 sm:mt-4 sm:gap-3">
         {children}
       </div>
     </div>
@@ -175,11 +181,12 @@ function FooterLink({
         max-w-full
         items-center
         gap-2
-        text-sm
+        text-xs
         leading-relaxed
         text-slate-400
         transition
         hover:text-sky-400
+        sm:text-sm
       "
     >
       {icon}
@@ -197,8 +204,8 @@ function SocialLink({ href, icon, label }) {
       aria-label={label}
       className="
         inline-flex
-        h-10
-        w-10
+        h-9
+        w-9
         shrink-0
         items-center
         justify-center
@@ -210,6 +217,9 @@ function SocialLink({ href, icon, label }) {
         hover:border-sky-400
         hover:bg-sky-400
         hover:text-slate-950
+
+        sm:h-10
+        sm:w-10
       "
     >
       {icon}
