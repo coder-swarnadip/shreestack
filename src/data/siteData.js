@@ -62,7 +62,6 @@ export const audiences = [
   { name: "Clinics", icon: Stethoscope },
   { name: "Coaching Centers", icon: Building2 },
   { name: "Photographers", icon: Camera },
-  { name: "Startups", icon: Rocket },
   { name: "Local Businesses", icon: Store },
   { name: "Growing Companies", icon: Gauge },
 ];
@@ -171,6 +170,7 @@ export const projects = [
     title: "Tamohan Magazine Publication Platform",
     category: "Publication / CMS Platform",
     imageSrc: "https://swarnadip-sarkar-portfolio.netlify.app/assets/projects/tamohan-collage.svg",
+     platformUrl: "https://tamohan.netlify.app/",
     description:
       "A full-stack content platform for managing magazine issues, submissions, members, and editorial workflows from one admin dashboard.",
     challenge:
