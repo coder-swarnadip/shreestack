@@ -1,4 +1,4 @@
-```jsx
+
 import { motion } from "framer-motion";
 import { audiences } from "../data/siteData";
 
@@ -96,4 +96,4 @@ function Industries() {
 }
 
 export default Industries;
-```
+
